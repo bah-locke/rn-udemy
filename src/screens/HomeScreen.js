@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, View, Button } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
-  
+
   const navigateToScreen = (screen) => {
     navigation.navigate(screen)
   }
@@ -20,6 +20,8 @@ const HomeScreen = ({ navigation }) => {
       {createButton('Components', 'Go to Components Demo')}
       {createButton('List', 'Go to List Demo')}
       {createButton('Image', 'Go to Image Demo')}
+      {createButton('Counter', 'Go to Counter Demo')}
+      {createButton('Color', 'Go to Color Demo')}
     </View>
   );
 };
