@@ -25,9 +25,11 @@ const ListScreen = () => {
 
 const styles = StyleSheet.create({
     textStyle: {
+        marginVertical: 1,
         borderStyle: 'solid',
         borderWidth: 2,
         padding: 10,
+        paddingVertical: 50,
         width: 200
     }
 });
