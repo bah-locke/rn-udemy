@@ -3,24 +3,17 @@ import { View, StyleSheet, Button, FlatList } from 'react-native';
 
 const ColorScreen = () => {
     const [colors, setColors] = useState([]);
-
-    const addColorElements = () => {
-        setColors([...colors, {
-            rgb: randomRgb(),
-        }], console.log(colors))
-    };
-
     return (
         <View>
             <Button title="Add a Color" onPress={(e) => {
-                addColorElements()
+                setColors([...colors, randomRgb()], console.log(colors))
             }}/>
             <FlatList 
                 showsVerticalScrollIndicator={false}
-                keyExtractor={(item) => item.rgb}
+                keyExtractor={(item) => item}
                 data={colors} 
                 renderItem={({item}) => {
-                    return <View style={{ height: 100, width: 100, backgroundColor: item.rgb }} />
+                    return <View style={{ height: 100, width: 100, backgroundColor: item }} />
             }}/>
         </View>
     )
