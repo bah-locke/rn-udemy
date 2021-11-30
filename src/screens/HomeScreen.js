@@ -25,6 +25,7 @@ const HomeScreen = ({ navigation }) => {
       {createButton('Counter')}
       {createButton('Color')}
       {createButton('Square')}
+      {createButton('Text')}
     </View>
   );
 };
