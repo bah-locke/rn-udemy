@@ -7,7 +7,9 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate(screen)
   }
 
-  const createButton = (screen, title) => {
+  const createButton = (screen) => {
+    const title = `Go to ${screen} Demo`;
+
     return (<Button 
       onPress={(e) => navigateToScreen(screen)}
       title={title}
@@ -17,11 +19,12 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View>
       <Text style={styles.text}>Hi there!</Text>
-      {createButton('Components', 'Go to Components Demo')}
-      {createButton('List', 'Go to List Demo')}
-      {createButton('Image', 'Go to Image Demo')}
-      {createButton('Counter', 'Go to Counter Demo')}
-      {createButton('Color', 'Go to Color Demo')}
+      {createButton('Components')}
+      {createButton('List')}
+      {createButton('Image')}
+      {createButton('Counter')}
+      {createButton('Color')}
+      {createButton('Square')}
     </View>
   );
 };
